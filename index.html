@@ -338,7 +338,8 @@ const bookmarkletCode = `(function(){
   function getLevelData(card){
     var a=card.querySelector('a[href*="/levels/"]')||card.closest('a[href*="/levels/"]');
     if(!a) return null;
-    var href=a.getAttribute('href')||'';
+    var href=a.getAttribu
+    te('href')||'';
     var m=href.match(/\\/levels\\/([^/?#]+)/);
     if(!m) return null;
     var id=m[1];
